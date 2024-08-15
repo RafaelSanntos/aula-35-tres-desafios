@@ -1,0 +1,118 @@
+/* Estilo para o container da lista de tarefas */
+.TaskList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 90vw;
+    max-height: 80vh;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    color: #333;
+}
+
+/* Estilo para o campo de input */
+.TaskList input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilo para o botão adicionar */
+.TaskList button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.TaskList button:hover {
+    background-color: #646cff;
+}
+
+/* Estilo para a lista de tarefas */
+.TaskList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para os itens da lista */
+.TaskList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    cursor: move; /* Mostra que o item pode ser movido */
+    background-color: #fff;
+    border-radius: 4px;
+    word-wrap: break-word; /* Quebra linhas longas de texto */
+}
+
+/* Estilo para o conteúdo das tarefas */
+.TaskContent {
+    flex-grow: 1;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    overflow-wrap: break-word; /* Quebra linhas longas de texto */
+}
+
+/* Estilo para o botão de remoção */
+.remove-btn {
+    border: none;
+    background: transparent;
+    color: #f00;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 600px) {
+    .TaskList {
+        padding: 10px;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    .TaskList input {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .TaskList button {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
+
+    .TaskList li {
+        padding: 8px;
+        font-size: 0.9em;
+        flex-direction: column; /* Alinha o texto e o botão de remoção verticalmente */
+        align-items: flex-start; /* Alinha o texto à esquerda */
+    }
+
+    .TaskContent {
+        margin-right: 0;
+        margin-bottom: 5px; /* Adiciona espaço entre o texto e o botão de remoção */
+    }
+
+    .remove-btn {
+        font-size: 1em;
+        align-self: flex-end; /* Alinha o botão de remoção à direita */
+    }
+}

@@ -1,0 +1,36 @@
+/* Estilo para o container */
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os textarea */
+  padding: 20px;
+  max-width: 100%;
+  max-height: 100vh; /* Limita a altura do container */
+  box-sizing: border-box;
+  overflow: auto; /* Adiciona rolagem se necessário */
+  height: 80vh; /* Define uma altura para o container */
+  width: 90vw; /* Define uma largura responsiva para o container */
+}
+
+/* Estilo para os textarea */
+textarea {
+  width: 100%; /* Faz o textarea ocupar toda a largura disponível */
+  flex: 1; /* Faz o textarea ocupar o espaço disponível */
+  min-height: 150px; /* Altura mínima do textarea */
+  resize: none; /* Impede o redimensionamento manual */
+  box-sizing: border-box;
+  padding: 15px; /* Aumenta o padding interno */
+  border: 1px solid #ccc; /* Define a borda dos textarea */
+  border-radius: 4px; /* Arredonda os cantos das bordas */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+  .App {
+    width: 95vw; /* Aumenta a largura do container em telas menores */
+  }
+
+  textarea {
+    min-height: 120px; /* Altura maior em telas menores para melhor visualização */
+  }
+}
